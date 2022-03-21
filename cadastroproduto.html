@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RemarcaFlex</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<script  src="javascript.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<form action="" id="formcadastrouser">
+	<nav  id="menu">
+		
+		<ul>
+			<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html" > Home</a></li>
+			<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="cadastroproduto.html">Cadastrar Produtos</a></li>
+			<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+			<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="multimidia.html">Multimídia</a></li>
+			<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+		</ul>
+	</nav>
+	<h3>Cadastro de Produtos</h3>
+	<div class="tabpage" id="divprecos">
+		<table class = "geralprodutos">
+			<tr>
+				<td style="width: 50%"
+				>
+					<fieldset>
+						<legend>Informações Diversas</legend>
+						<table style="width:100%">
+							<tr>
+
+									<td class="label2"><label for="descricao">Descrição:</label></td>
+									<td class="field2"><input type="text" id="descricao" class="field_p" mask="decimal2" hint="Preço mínimo de venda determinado pelo fabricante."></td>
+									<td class="label2"><label for="categoria">Categoria:</label></td>
+								 	<td class="field2"><select id="categoria" name="categoria" class="field_p" required="categoria" table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >Sim</option><option value="N"  title="Não" alt="Não" >Categoria Teste</option></select></td>
+							</tr>
+							<tr>
+								<td class="label2"><label for="codean">Código Ean:</label></td>
+								<td class="field2"><input type="text" id="codean" class="field_p" mask="decimal2" ></td>
+								<td class="label2"><label for="undvenda">Ativo:</label></td>
+								<td class="field2"><select id="undvenda" name="precovariavel" class="field_p"  table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >Sim</option><option value="N"  title="Não" alt="Não" >Não</option></select></td>
+							</tr>
+							<tr>
+								<td class="label2"><label for="precovariavel">Preço Variavel:</label></td>
+								<td class="field2"><select id="precovariavel" name="precovariavel" class="field_p"  table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >Sim</option><option value="N"  title="Não" alt="Não" >Não</option></select></td>
+								<td class="label2"><label for="qtdatacado">Preço de Venda:</label></td>
+								<td class="field2"><input class="field_p" id="qtdatacado" type="text" mask="decimal4"></td>
+								
+							</tr>
+							<tr>
+								<td class="label2"><label for="undvenda">Und. de Venda:</label></td>
+								<td class="field2"><select id="undvenda" name="precovariavel" class="field_p"  table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >Sim</option><option value="N"  title="Não" alt="Não" >Não</option></select></td>
+								
+								<td class="label2"><label for="qtdestoque">Qtd. Estoque:</label></td>
+								<td ><input name="qtdestoque" type="text" id="qtdestoque"  ></td>
+							
+
+							</tr>
+						<tr>
+						<td> <br/></td>
+					</tr>
+				</tr>	
+							
+							
+						</table>
+					</fieldset>
+				</td>
+			</table>
+			<table class = "tributacao">
+				<td style="width: 50%">
+					<fieldset exibirprecoprod="true">
+						<legend>Tributação</legend>
+						<table style="width:100%">
+							<tr>
+								<td ><input type="checkbox" id="sinctributacao" class="field_p" mask="decimal2" required="Custo Tabela"></td>
+								<td ><label id="sinctrib" for="sinctributacao">Usar as mesmas tributações da categoria </label></td>
+								<td class="label2"><label for="ncm">NCM do produto:</label></td>
+								<td class="field2"><input type="text" id="ncm" class="field_p" mask="decimal2" required="Custo Reposição"></td>
+
+							</tr>
+							<tr>
+								<td class="label2"><label for="precovariavel">Origem do Produto:</label></td>
+								<td class="field2"><select id="precovariavel" name="precovariavel" class="field_p"  table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8;</option><option value="N"  title="Não" alt="Não" >Não</option></select></td>
+								<td class="label2"><label for="qtdatacado">CFOP:</label></td>
+								<td class="field2"><input class="field_p" id="qtdatacado" type="text" mask="decimal4"></td>
+								
+							</tr>
+							<tr>
+								<td class="label2"><label for="precovariavel">CSOSN</label></td>
+								<td class="field2"><select id="precovariavel" name="precovariavel" class="field_p"  table="simnao" filter=""><option value=""></option><option value="S"  title="Sim" alt="Sim" >102</option><option value="N"  title="Não" alt="Não" >300</option></select></td>
+								<td class="label2"><label for="qtdatacado">Aliquota de ICMS:</label></td>
+								<td class="field2"><input class="field_p" id="qtdatacado" type="text" mask="decimal4"></td>
+								
+							</tr>
+							<tr>
+								
+								<td class="label2"><label for="descricao">CST do PIS:</label></td>
+								<td class="field2"><input type="text" id="descricao" class="field_p" mask="decimal2" hint="Preço mínimo de venda determinado pelo fabricante."></td>
+								<td class="label2"><label for="categoria">Aliquota do PIS:</label></td>
+								<td class="field2"><input class="field_p" id="qtdatacado" type="text" mask="decimal4"></td>
+						</tr>
+						<tr>
+								
+							<td class="label2"><label for="descricao">CST do COFINS:</label></td>
+							<td class="field2"><input type="text" id="descricao" class="field_p" mask="decimal2" hint="Preço mínimo de venda determinado pelo fabricante."></td>
+							<td class="label2"><label for="categoria">Aliquota do COFINS:</label></td>
+							<td class="field2"><input class="field_p" id="qtdatacado" type="text" mask="decimal4"></td>
+					</tr>
+					<tr>
+								
+						<td class="label2"><label for="descricao">COntribuição Social:</label></td>
+						<td class="field2"><input type="text" id="descricao" class="field_p" ></td>
+						
+				</tr>
+				<tr>
+					<td> <br/></td>
+				</tr>
+						</table>
+					</fieldset>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</form>
+<button type="button" class="btn btn-primary" onClick="salvarUsuario()">Salvar</button>
+<button type="button" class="btn btn-secondary" onClick="teste()">Novo</button>
+
+
+
+
+
+
+</body>
+<script>
+	 function criaMascara(){
+		
+    console.log('algo foi digitado!')
+  };
+	</script>
+
+</html>
