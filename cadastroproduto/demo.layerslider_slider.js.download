@@ -1,0 +1,1 @@
+function _layersliderInit(){jQuery().layerSlider&&jQuery("div.layerslider").length>0&&jQuery("div.layerslider").each(function(){jQuery(this).layerSlider(layer_options)})}jQuery(document).ready(function(){jQuery(".layerslider").length>0&&_layersliderInit()});
